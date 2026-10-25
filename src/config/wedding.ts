@@ -94,6 +94,13 @@ export const wedding = {
       'Assalamu Alaikum! Sending my duas for Firdous & Hudail — may Allah bless their union with love, mercy and barakah. Ameen.',
   },
 
+  /**
+   * Guest-open tracking. Paste your Google Apps Script web-app URL here
+   * (see scripts/LogToSheet.gs). Links shared as ?g=family-name get logged
+   * to the sheet with a timestamp. Empty string = tracking off.
+   */
+  trackingUrl: '',
+
   footer: {
     line1: 'With love & blessings,',
     line2: 'The family of Irshad Ali',
