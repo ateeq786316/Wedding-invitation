@@ -10,6 +10,7 @@ import { Rsvp } from './components/Rsvp'
 import { Footer } from './components/Footer'
 import { AudioToggle, ThemeToggle, type Theme } from './components/Toggles'
 import { trackOpen } from './lib/track'
+import { Analytics } from '@vercel/analytics/react'
 import { PatternBand } from './components/Ornament'
 import { CornerFlourish } from './components/Flourish'
 import { VineScroll } from './components/VineScroll'
@@ -84,6 +85,7 @@ export default function App() {
       <Footer />
 
       <AudioToggle />
+      <Analytics />
     </div>
   )
 }
