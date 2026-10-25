@@ -99,7 +99,8 @@ export const wedding = {
    * (see scripts/LogToSheet.gs). Links shared as ?g=family-name get logged
    * to the sheet with a timestamp. Empty string = tracking off.
    */
-  trackingUrl: '',
+  trackingUrl:
+    'https://script.google.com/macros/s/AKfycbzEZTSwbWjNFly-g2lRpWWRo3psKq-4OMRwcxFktPRpDTokqpx1f7B-UHYH5l0Zuro/exec',
 
   footer: {
     line1: 'With love & blessings,',
