@@ -35,7 +35,7 @@ export default function App() {
     }
   }, [opened])
 
-  // Log the open once (named via ?g= links, 'direct' otherwise).
+  // Silent open log — device, location, referrer, once per session.
   useEffect(() => {
     trackOpen()
   }, [])

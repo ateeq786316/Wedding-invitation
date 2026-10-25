@@ -137,7 +137,7 @@ export function IntroGate({ onOpen }: { onOpen: () => void }) {
           </div>
 
           <p className="mt-2 text-sm sm:text-base tracking-[0.35em] uppercase text-ivory-dim">
-            Tap to open
+            Tap the seal to open
           </p>
         </div>
       </motion.div>

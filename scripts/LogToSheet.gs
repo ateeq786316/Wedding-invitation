@@ -17,13 +17,17 @@ function doPost(e) {
   } catch (err) {}
   var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
   if (sheet.getLastRow() === 0) {
-    sheet.appendRow(['Time', 'Guest', 'Device', 'Referrer']);
+    sheet.appendRow(['Time', 'Guest', 'Device', 'Referrer', 'Location', 'IP', 'Screen', 'Lang']);
   }
   sheet.appendRow([
     new Date(),
     data.g || 'direct',
     data.ua || '',
     data.ref || '',
+    data.loc || '',
+    data.ip || '',
+    data.scr || '',
+    data.lang || '',
   ]);
   return ContentService.createTextOutput('ok');
 }
