@@ -1,0 +1,243 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-deep: var(--bg-deep);
+  --color-card: var(--card);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-gold-dim: var(--gold-dim);
+  --color-ivory: var(--ivory);
+  --color-ivory-dim: var(--ivory-dim);
+  --color-wax: var(--wax);
+
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-urdu: "Noto Nastaliq Urdu", serif;
+  --font-arabic: "Amiri", serif;
+  --font-script: "Great Vibes", cursive;
+}
+
+:root,
+[data-theme='emerald'] {
+  --bg: #0b3d2e;
+  --bg-deep: #052a1f;
+  --card: #0e4535;
+  --gold: #c9a24b;
+  --gold-soft: #e9d6a4;
+  --gold-dim: rgba(201, 162, 75, 0.35);
+  --ivory: #f6f1e6;
+  --ivory-dim: #c9c0ab;
+  --wax: #7a1d1d;
+}
+
+[data-theme='maroon'] {
+  --bg: #55101c;
+  --bg-deep: #370a12;
+  --card: #611523;
+  --gold: #c9a24b;
+  --gold-soft: #e9d6a4;
+  --gold-dim: rgba(201, 162, 75, 0.35);
+  --ivory: #f6f1e6;
+  --ivory-dim: #d3c2b0;
+  --wax: #7a1d1d;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-deep);
+  color: var(--ivory);
+  font-family: var(--font-serif);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--bg-deep);
+}
+
+/* Subtle 8-point-star jali lattice, tiled over the page background. */
+.jali {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96'%3E%3Cg fill='none' stroke='%23c9a24b' stroke-opacity='0.1'%3E%3Crect x='26' y='26' width='44' height='44'/%3E%3Crect x='26' y='26' width='44' height='44' transform='rotate(45 48 48)'/%3E%3Ccircle cx='48' cy='48' r='3'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Scrolling gold floral vine — horizontal section linings. */
+.pattern-band {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='52' height='18' viewBox='0 0 52 18'%3E%3Cg fill='none' stroke='%23c9a24b' stroke-opacity='0.55' stroke-width='1'%3E%3Cpath d='M0 9 Q6.5 0.5 13 9 T26 9 T39 9 T52 9'/%3E%3Cpath d='M6.5 3.5 q2.5 -3 5 0 q-2.5 3 -5 0 Z'/%3E%3Cpath d='M32.5 3.5 q2.5 -3 5 0 q-2.5 3 -5 0 Z'/%3E%3C/g%3E%3Cg fill='%23c9a24b' fill-opacity='0.5'%3E%3Ccircle cx='19.5' cy='12.5' r='1'/%3E%3Ccircle cx='18.2' cy='14.2' r='1'/%3E%3Ccircle cx='20.8' cy='14.2' r='1'/%3E%3Ccircle cx='45.5' cy='12.5' r='1'/%3E%3Ccircle cx='44.2' cy='14.2' r='1'/%3E%3Ccircle cx='46.8' cy='14.2' r='1'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: center;
+}
+
+/* Same band rotated for vertical door linings. */
+.pattern-band-y {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='30' viewBox='0 0 12 30'%3E%3Cg fill='none' stroke='%23c9a24b' stroke-opacity='0.55' stroke-width='1'%3E%3Cpath d='M6 10.5 L10.5 15 L6 19.5 L1.5 15 Z'/%3E%3C/g%3E%3Ccircle cx='6' cy='3' r='0.9' fill='%23c9a24b' fill-opacity='0.5'/%3E%3Ccircle cx='6' cy='27' r='0.9' fill='%23c9a24b' fill-opacity='0.5'/%3E%3C/svg%3E");
+  background-repeat: repeat-y;
+  background-position: center;
+}
+
+/* Gold rose linework — like the foil-rose envelope of a printed card. */
+.rose-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='76' height='76' viewBox='0 0 76 76'%3E%3Cg fill='none' stroke='%23c9a24b' stroke-opacity='0.2' stroke-width='1'%3E%3Cpath d='M38 16 C28 18 22 26 22 36 C22 47 29 54 38 54 C47 54 54 47 54 36 C54 26 48 18 38 16 Z'/%3E%3Cpath d='M38 24 C43 25 47 30 46 36 C45 42 39 46 33 44 C28 42 26 36 28 31 C30 27 35 25 39 28 C42 30 43 34 41 37'/%3E%3Cpath d='M30 54 C27 61 22 66 15 68'/%3E%3Cpath d='M46 54 C49 61 54 66 61 68'/%3E%3Cpath d='M15 68 C18 63 23 61 28 62 C26 67 20 70 15 68 Z'/%3E%3Cpath d='M61 68 C58 63 53 61 48 62 C50 67 56 70 61 68 Z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Royal damask — large palmette medallions in an interlocking grid. */
+:root {
+  --damask-img: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='62' height='62' viewBox='0 0 96 96'%3E%3Cg fill='none' stroke='%23d4af5f' stroke-opacity='0.32' stroke-width='1.1'%3E%3Cpath d='M48 18 C46 25 46 31 48 37'/%3E%3Cpath d='M48 37 C37 41 31 50 31 60'/%3E%3Cpath d='M48 37 C59 41 65 50 65 60'/%3E%3Cpath d='M31 60 C25 66 23 74 27 80 C33 84 40 80 38 73'/%3E%3Cpath d='M65 60 C71 66 73 74 69 80 C63 84 56 80 58 73'/%3E%3Cpath d='M48 44 C43 50 43 58 48 65 C53 58 53 50 48 44 Z'/%3E%3Cpath d='M48 65 C44 71 39 73 35 75'/%3E%3Cpath d='M48 65 C52 71 57 73 61 75'/%3E%3Cpath d='M40 31 C43 33 45 34 48 34 C51 34 53 33 56 31'/%3E%3Ccircle cx='48' cy='13' r='1.6'/%3E%3Cpath d='M0 0 C10 3 16 10 18 20 C9 18 3 10 0 0 Z'/%3E%3Cpath d='M96 0 C86 3 80 10 78 20 C87 18 93 10 96 0 Z'/%3E%3Cpath d='M0 96 C10 93 16 86 18 76 C9 78 3 86 0 96 Z'/%3E%3Cpath d='M96 96 C86 93 80 86 78 76 C87 78 93 86 96 96 Z'/%3E%3Cpath d='M0 48 C6 43 11 43 15 48 C11 53 6 53 0 48 Z'/%3E%3Cpath d='M96 48 C90 43 85 43 81 48 C85 53 90 53 96 48 Z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.damask {
+  background-image: var(--damask-img);
+}
+
+/* Gate doors — damask layered over the depth gradient. */
+.door-left {
+  background-image: var(--damask-img),
+    linear-gradient(100deg, var(--bg-deep) 0%, var(--bg) 70%, var(--card) 100%);
+}
+.door-right {
+  background-image: var(--damask-img),
+    linear-gradient(260deg, var(--bg-deep) 0%, var(--bg) 70%, var(--card) 100%);
+}
+
+/* Velvet folds + soft sheen — gives the doors a fabric depth. */
+.door-texture {
+  background-image:
+    radial-gradient(
+      ellipse 60% 85% at 50% 42%,
+      rgba(255, 240, 200, 0.06),
+      transparent 70%
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.028) 0px,
+      rgba(255, 255, 255, 0.028) 5px,
+      transparent 5px,
+      transparent 24px,
+      rgba(0, 0, 0, 0.08) 24px,
+      rgba(0, 0, 0, 0.08) 32px,
+      transparent 32px,
+      transparent 48px
+    );
+}
+
+/* Twisted golden cord — the twine wrapped around a physical card. */
+.cord {
+  height: 6px;
+  border-radius: 3px;
+  background: repeating-linear-gradient(
+    55deg,
+    #6f4d14 0px,
+    #6f4d14 2px,
+    #e9d6a4 2px,
+    #e9d6a4 4px,
+    #a8792f 4px,
+    #a8792f 6px
+  );
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.45),
+    inset 0 1px 1px rgba(255, 255, 255, 0.25);
+}
+
+.vignette::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 55%,
+    rgba(0, 0, 0, 0.35) 100%
+  );
+  z-index: 5;
+}
+
+/* Gold gradient text for names & headings. */
+.gold-text {
+  background: linear-gradient(
+    180deg,
+    var(--gold-soft) 0%,
+    var(--gold) 55%,
+    #8f6f2a 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Slow foil shimmer across gold text — motion-safe only. */
+@media (prefers-reduced-motion: no-preference) {
+  .gold-text {
+    background: linear-gradient(
+      105deg,
+      var(--gold-soft) 15%,
+      #fff3d0 38%,
+      var(--gold) 55%,
+      #8f6f2a 85%
+    );
+    background-size: 240% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: goldSheen 7s ease-in-out infinite;
+  }
+  @keyframes goldSheen {
+    0%,
+    100% {
+      background-position: 0% 0;
+    }
+    50% {
+      background-position: 100% 0;
+    }
+  }
+}
+
+/* Thin gold scrollbar to match the card. */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-deep);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--gold-dim);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
+}
+
+.hairline {
+  border-color: var(--gold-dim);
+}
+
+/* Mughal horseshoe-arch card. */
+.arch {
+  border-radius: 999px 999px 14px 14px;
+}
+
+/* Slow ornamental shimmer on the seal hint. */
+@keyframes sealPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(201, 162, 75, 0.45);
+  }
+  50% {
+    box-shadow: 0 0 0 14px rgba(201, 162, 75, 0);
+  }
+}
+.seal-pulse {
+  animation: sealPulse 2.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .seal-pulse {
+    animation: none;
+  }
+}
