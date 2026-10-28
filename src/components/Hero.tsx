@@ -60,7 +60,7 @@ export function Hero() {
       </motion.h1>
 
       <motion.p {...rise(1.2)} className="mt-4 text-sm sm:text-base tracking-[0.2em] uppercase text-ivory-dim">
-        Daughter of {wedding.bride.father} &nbsp;·&nbsp; Son of {wedding.groom.father}
+        Daughter of {wedding.bride.father}
       </motion.p>
 
       {/* Scroll hint */}
