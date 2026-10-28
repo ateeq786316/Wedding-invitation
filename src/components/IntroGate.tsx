@@ -24,7 +24,7 @@ export function IntroGate({ onOpen }: { onOpen: () => void }) {
 
   // Auto-open if the guest doesn't tap within a few seconds.
   useEffect(() => {
-    const id = setTimeout(handleOpen, 4500)
+    const id = setTimeout(handleOpen, 1500)
     return () => clearTimeout(id)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
