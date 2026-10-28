@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { motion, useReducedMotion } from 'motion/react'
 import { wedding } from '../config/wedding'
 import { WaxSeal } from './WaxSeal'
@@ -21,6 +21,13 @@ export function IntroGate({ onOpen }: { onOpen: () => void }) {
     }
     setOpening(true)
   }
+
+  // Auto-open if the guest doesn't tap within a few seconds.
+  useEffect(() => {
+    const id = setTimeout(handleOpen, 4500)
+    return () => clearTimeout(id)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   const doorTransition = {
     duration: 1.35,

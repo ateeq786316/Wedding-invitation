@@ -11,8 +11,8 @@ export const wedding = {
     father: 'Irshad Ali',
   },
   groom: {
-    name: 'Hudail',
-    nameUrdu: 'ہدیل',
+    name: 'Muhammad Hudail Lasani',
+    nameUrdu: 'محمد ھدیل لاثانی',
     father: 'Dilawar Hussain',
   },
   monogram: 'H&F',
